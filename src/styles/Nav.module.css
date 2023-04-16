@@ -1,0 +1,175 @@
+#headerContainer{
+  position: relative;
+  height: 700px;
+  
+}
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.034), rgba(0, 0, 0, 0.932));
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+}
+
+.nav {
+  background-color: transparent !important; /* Apply transparency */
+  padding-left: 140px !important; /* Apply left padding */
+  padding-right: 140px !important; /* Apply right padding */
+  padding-top: 40px;
+}
+
+.navBtn {
+  border-radius: none important;
+}
+
+#links > ul > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+#links > ul > div > li {
+  margin-right: 20px;
+}
+
+#links > ul > div > button {
+  border-radius: 0 !important;
+}
+
+#headerText {
+  margin: auto;
+  max-width: 800px;
+  margin-top: 150px;
+}
+
+#headerTextMain {
+  font-size: 7rem;
+}
+
+#headerSubText {
+  max-width: 500px;
+  margin: auto;
+}
+
+.aboutBoxes{
+  position: absolute;
+  top: 550px;
+  left: 10%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  z-index: 1;
+  margin-bottom: 30px;
+}
+
+.aboutBox{
+  height: 300px;
+  width: 400px;
+  padding: 40px 30px;
+  margin-bottom: 50px;
+}
+
+.aboutBox > h2 {
+  font-size: 2rem ;
+  margin-bottom: 1rem;
+}
+
+.aboutBox1{
+  background-color: #FF0000;
+}
+
+.aboutBox2{
+  background-color: #FF6B00;
+
+}
+
+.aboutBox3{
+  background-color: #FFB800;
+}
+/* Define the slide-in animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Define the slide-out animation */
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+/* Apply slide-in animation when the element has slide-in class */
+.slidein {
+  animation: slideIn 0.3s ease-in-out;
+}
+
+/* Apply slide-out animation when the element has slide-out class */
+.slideout {
+  animation: slideOut 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 650px) {
+  .nav {
+    background-color: transparent !important; /* Apply transparency */
+    padding-left: 15px !important; /* Apply left padding */
+    padding-right: 15px !important; /* Apply right padding */
+    padding-top: 40px;
+  }
+  #links > ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding-top: 20px;
+  }
+  #links > ul > li {
+    width: 100%;
+  }
+
+  .nav-btn {
+    display: block;
+    width: 100%;
+  }
+
+  #headerTextMain {
+    font-size: 4rem;
+  }
+  .aboutBoxes{
+    position: absolute;
+    top: 550px;
+    left: 12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+    z-index: 1;
+    margin-bottom: 30px;
+  }
+
+  .aboutBox{
+    height: 300px;
+    width: 300px;
+    padding: 10px;
+  }
+  
+}
