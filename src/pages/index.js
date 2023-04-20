@@ -1,5 +1,5 @@
 import Head from "next/head";
-import HeaderOne from "@/components/HeaderOne";
+import HomePage from "./HomePage";
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <HeaderOne />
+        <HomePage />
       </main>
     </>
   );

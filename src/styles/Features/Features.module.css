@@ -1,0 +1,36 @@
+.featuresDiv{
+    margin: auto;
+    margin-top: 250px;
+    max-width: 1300px;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+.featuresDiv::after{
+    content: '';
+    clear: both;
+}
+
+.featuresWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 20px;
+}
+
+.featuresBox{
+    margin: 20px;
+    text-align: center;
+    padding: 20px;
+    width: 300px;
+    height: 250px;
+    text-align: center;
+}
+
+.featuresBox > svg {
+    font-size: 3em;
+    margin: auto;
+    margin-bottom: 20px;
+    color: rgb(29, 29, 29);
+}
