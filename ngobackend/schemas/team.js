@@ -27,7 +27,7 @@ export default {
     },
     {
       name: 'position',
-      title: 'Poition',
+      title: 'Position',
       type: 'string',
       validation: (Rule) => Rule.required(),
     },

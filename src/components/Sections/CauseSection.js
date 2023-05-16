@@ -1,4 +1,4 @@
-import styles from "../styles/Cause/Causes.module.css";
+import styles from "../../styles/Cause/Causes.module.css";
 import Image from "next/image";
 import { Button } from "flowbite-react";
 
