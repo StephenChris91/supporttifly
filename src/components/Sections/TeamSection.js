@@ -1,6 +1,7 @@
+import { fetchTeam } from "../../../utils/FetchTeam";
 import styles from "../../styles/Team/Team.module.css";
 
-import { fetchTeam } from "../../../utils/FetchTeam";
+
 
 
 const TeamSection = ({ teams }) => {
@@ -18,12 +19,22 @@ export default TeamSection;
 
 //Backend Code
 export const getServerSideProps = async () => {
-
-  const teams = await fetchTeam()
-  return {
-    props: {
-      teams,
-    }
+  try {
+    const teams = await fetchTeam();
+    console.log(teams); // Verify the value of teams
+    return {
+      props: {
+        teams,
+      },
+    };
+  } catch (error) {
+    console.error('Error fetching teams:', error);
+    return {
+      props: {
+        teams: [], // Provide an empty array or appropriate default value in case of error
+      },
+    };
   }
-}
+};
+
 
