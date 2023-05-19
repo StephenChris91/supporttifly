@@ -1,7 +1,8 @@
 import Head from "next/head";
 import HomePage from "./HomePage";
+import { fetchTeam } from "../../utils/FetchTeam";
 
-export default function Home() {
+export default function Home( { teams } ) {
   return (
     <>
       <Head>
@@ -11,8 +12,20 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <HomePage />
+        <HomePage teamData={teams}/>
       </main>
     </>
   );
+}
+
+
+
+export async function getStaticProps() {
+  const teams = await fetchTeam();
+
+  return {
+    props: {
+      teams: teams || [], // Provide a default empty array if teams data is undefined
+    },
+  };
 }
