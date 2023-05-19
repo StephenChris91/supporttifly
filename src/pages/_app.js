@@ -1,5 +1,16 @@
 import "@/styles/globals.css";
+import App from 'next/app';
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
-}
+const AppComponent = ({ Component, pageProps }) => {
+    return <Component {...pageProps} />
+};
+
+AppComponent.getInitialProps = async (appContext) => {
+  let pageProps = {};
+  if (appContext.Component.getInitialProps) {
+      pageProps = await appContext.Component.getInitialProps(appContext.ctx);
+  }
+  return { ...pageProps }
+};
+
+export default App;
