@@ -1,0 +1,41 @@
+#volunteer{
+    width: 100%;
+    padding: 30px;
+    height: auto;
+    margin: auto;
+    background-color: rgb(240, 239, 239);
+}
+
+.volunteerWrapper{
+    display: flex;
+    place-content: center;
+    align-items: center;
+    margin: auto;
+    width: 98%;
+    margin-bottom: 50px;
+}
+#small, #base, #comment {
+    border-radius: 0;
+}
+.volunteerImage{
+    margin-right: 20px;
+}
+
+.volunteerForm h2{
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+#small{
+    width: 600px;
+}
+.volunteerBtn{
+    margin: auto;
+    border-radius: 0;
+    width: 300px;
+    padding: 10px;
+}
+
+.volunteerBtn:hover{
+    background-color: rgb(29,29,29);;
+}
