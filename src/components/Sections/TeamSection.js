@@ -1,11 +1,14 @@
 import { sanityClient } from '../../../sanity';
 import imageUrlBuilder from '@sanity/image-url';
+import { SimpleGrid, Box, Container, Center } from '@chakra-ui/react'
+import Image from 'next/image'
+
+
 
 import styles from "../../styles/Team/Team.module.css";
 
 const TeamSection = ({ teamData }) => {
   console.log(teamData);
-
 
   const getImageUrl = (imageRef) => {
     const builder = imageUrlBuilder(sanityClient);
@@ -14,17 +17,25 @@ const TeamSection = ({ teamData }) => {
   };
   
   return (
-    <div>
-      <h2>Our Team</h2>
+    <section id={styles.teams}>
+      <h2 className={styles.teamsHeader}>Our Team</h2>
+      <div className={styles.teamsWrapper}>
+      <SimpleGrid columns={3} spacing={2}>
       {teamData &&
         teamData.map((team) => (
-          <div key={team._id}>
-            <img src={getImageUrl(team.image.asset._ref)} alt={team.name} />
-            <h3>{team.name}</h3>
-            <p>{team.position}</p>
+          <div key={team._id} className={styles.teams}>
+            <Image width={400} height={400} src={getImageUrl(team.image.asset._ref)} alt={team.name} />
+            <div className={styles.teamsDetails}>
+                <h2 className={styles.teamsName}>{team.name}</h2>
+                <p>{team.title}</p>
+                <h3>{team.position}</h3>              
+            </div>
           </div>
         ))}
-    </div>
+        </SimpleGrid>
+      </div>
+      
+    </section>
   );
 };
 
