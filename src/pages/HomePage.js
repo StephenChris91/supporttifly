@@ -3,9 +3,8 @@ import Features from "@/components/Features";
 import CauseSection from "@/components/Sections/CauseSection";
 import TeamSection from "@/components/Sections/TeamSection";
 import ContactSection from "@/components/Sections/ContactSection";
-import FooterSection from "@/components/Sections/FooterSection";
 
-const HomePage = ({ teamData }) => {
+const Homepage = ({ teamData }) => {
   return (
     <>
       <HeaderOne />
@@ -20,4 +19,4 @@ const HomePage = ({ teamData }) => {
 
 
 
-export default HomePage;
+export default Homepage;

@@ -1,32 +1,36 @@
-#headerContainer{
+#headerContainer {
   position: relative;
   height: 700px;
-  
+
 }
-.overlay{
+
+.overlay {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.034), rgba(0, 0, 0, 0.932));
+  background-color: linear-gradient(to bottom, rgba(255, 255, 255, 0.034), rgba(0, 0, 0, 0.932));
   background-position: center;
   background-size: cover;
   z-index: 0;
 }
 
 .nav {
-  background-color: transparent !important; /* Apply transparency */
-  padding-left: 140px !important; /* Apply left padding */
-  padding-right: 140px !important; /* Apply right padding */
+  background-color: transparent !important;
+  /* Apply transparency */
+  padding-left: 140px !important;
+  /* Apply left padding */
+  padding-right: 140px !important;
+  /* Apply right padding */
   padding-top: 40px;
 }
 
-.navBtn {
-  border-radius: none important;
+#navBtn {
+  border-radius: 0;
 }
 
-#links > ul > div {
+#links>ul>div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -34,11 +38,11 @@
   margin: auto;
 }
 
-#links > ul > div > li {
+#links>ul>div>li {
   margin-right: 20px;
 }
 
-#links > ul > div > button {
+#links>ul>div>button {
   border-radius: 0 !important;
 }
 
@@ -57,7 +61,7 @@
   margin: auto;
 }
 
-.aboutBoxes{
+.aboutBoxes {
   position: absolute;
   top: 550px;
   left: 12%;
@@ -68,36 +72,38 @@
   margin-bottom: 30px;
 }
 
-.aboutBox{
+.aboutBox {
   height: 300px;
   width: 400px;
   padding: 40px 30px;
   margin-bottom: 50px;
 }
 
-.aboutBox > h2 {
-  font-size: 2rem ;
+.aboutBox>h2 {
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-.aboutBox1{
+.aboutBox1 {
   background-color: #FF0000;
 }
 
-.aboutBox2{
+.aboutBox2 {
   background-color: #FF6B00;
 
 }
 
-.aboutBox3{
+.aboutBox3 {
   background-color: #FFB800;
 }
+
 /* Define the slide-in animation */
 @keyframes slideIn {
   from {
     transform: translateX(-100%);
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;
@@ -110,6 +116,7 @@
     transform: translateX(0);
     opacity: 1;
   }
+
   to {
     transform: translateX(-100%);
     opacity: 0;
@@ -128,12 +135,16 @@
 
 @media screen and (max-width: 650px) {
   .nav {
-    background-color: transparent !important; /* Apply transparency */
-    padding-left: 15px !important; /* Apply left padding */
-    padding-right: 15px !important; /* Apply right padding */
+    background-color: transparent !important;
+    /* Apply transparency */
+    padding-left: 15px !important;
+    /* Apply left padding */
+    padding-right: 15px !important;
+    /* Apply right padding */
     padding-top: 40px;
   }
-  #links > ul {
+
+  #links>ul {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -142,7 +153,8 @@
     margin: auto;
     padding-top: 20px;
   }
-  #links > ul > li {
+
+  #links>ul>li {
     width: 100%;
   }
 
@@ -154,7 +166,8 @@
   #headerTextMain {
     font-size: 4rem;
   }
-  .aboutBoxes{
+
+  .aboutBoxes {
     position: absolute;
     top: 550px;
     left: 12%;
@@ -166,10 +179,10 @@
     margin-bottom: 30px;
   }
 
-  .aboutBox{
+  .aboutBox {
     height: 300px;
     width: 300px;
     padding: 10px;
   }
-  
+
 }

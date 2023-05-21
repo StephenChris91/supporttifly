@@ -1,0 +1,16 @@
+#campaignContainer{
+  position: relative;
+  height: 700px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+}

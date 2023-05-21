@@ -12,7 +12,7 @@ const HeaderOne = () => {
       />
       <div className={styles.overlay}></div>
       <div className="absolute top-0 left-0 w-full h-full flex flex-col">
-        <Nav />
+        <Nav image='/logo.png' btnColor='bg-red-700'/>
         <AboutSection />
       </div>
     </div>

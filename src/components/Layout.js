@@ -1,4 +1,3 @@
-import HomePage from "@/pages/HomePage";
 import FooterSection from "./Sections/FooterSection";
 
 const Layout = ({ children }) => {
