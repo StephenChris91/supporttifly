@@ -1,0 +1,33 @@
+#footer{
+    background-color: #000;
+    padding-bottom: 20px;
+}
+
+#footerWrapper{
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    margin: auto;
+    width: 98%;
+    margin-bottom: 50px;
+    padding: 30px;
+}
+
+#footerIcons{
+    display: flex;
+    justify-content: center;
+    gap: 800px;
+    margin: auto;
+}
+
+.footerBtn{
+    margin: auto;
+    border-radius: 0;
+    width: 300px;
+    padding: 10px;
+}
+
+.footerBtn:hover{
+    background-color: rgb(29,29,29);;
+}

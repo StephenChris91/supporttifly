@@ -39,3 +39,14 @@
 .volunteerBtn:hover{
     background-color: rgb(29,29,29);;
 }
+
+.volunteerBtn{
+    margin-top: 5px;
+    border-radius: 0;
+    width: 100%;
+    padding: 10px;
+}
+
+.volunteerBtn:hover{
+    background-color: rgb(29,29,29);;
+}

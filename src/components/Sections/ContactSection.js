@@ -14,8 +14,8 @@ const ContactSection = () => {
             <Image
                 src="/images/contactSectionImage.png"
                 alt="contact-section-image"
-                width={450}
-                height={450}
+                width={500}
+                height={500}
                 className={styles.volunteerImage}
                 />
             </div>
@@ -63,6 +63,14 @@ const ContactSection = () => {
                         required={true}
                         rows={4}
                     />
+                    <Button
+                        className={[
+                        "bg-red-700 text-lg text-bold",
+                        styles.volunteerBtn, // Add slide-in and slide-out classes based on isMenuOpen state
+                        ].join(" ")}
+                    >
+                        Submit
+                    </Button>{" "}
                     </div>
                     </div>
             </div>
