@@ -1,4 +1,8 @@
+import { Swiper, SwiperSlide } from 'swiper/react';
 import styles from '../../styles/Campaign/Campaign.module.css'
+import { Carousel } from 'flowbite-react'
+import 'swiper/css';
+import Image from 'next/image'
 
 const CampaignSection = () => {
 
@@ -8,6 +12,25 @@ const CampaignSection = () => {
         <div className={styles.CampaignContainer}>
           <h1>Campaign <br />Causes</h1>
           <div className={styles.sliderContainer}>
+            <div  id={styles.slider}>
+              <Carousel>
+                <Image 
+                  src='/images/feed-poor.png'
+                  width={500}
+                  height={500}
+                />
+                <Image 
+                  src='/images/educare.png'
+                  width={500}
+                  height={500}
+                />
+                <Image 
+                  src='/images/health.png'
+                  width={500}
+                  height={500}
+                />
+              </Carousel>
+          </div>
           </div>
         </div>
       </div>
@@ -17,3 +40,9 @@ const CampaignSection = () => {
 
 
 export default CampaignSection
+
+
+// Import Swiper React components
+
+// Import Swiper styles
+

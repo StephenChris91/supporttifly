@@ -51,13 +51,13 @@ const FooterSection = () => {
                     <div>
                         <Footer.Title title="NAVIGATION" />
                         <Footer.LinkGroup col={true}>
-                        <Footer.Link href="#">
+                        <Footer.Link href="/">
                             Home
                         </Footer.Link>
-                        <Footer.Link href="#">
+                        <Footer.Link href="/outreach">
                             Outreach
                         </Footer.Link>
-                        <Footer.Link href="#">
+                        <Footer.Link href="/contact">
                             Contact Us
                         </Footer.Link>
                         </Footer.LinkGroup>

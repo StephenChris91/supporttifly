@@ -1,6 +1,8 @@
 import Head from "next/head";
-import Homepage from './HomePage'
+import Homepage from './homepage'
 import { fetchTeam } from "../../utils/FetchTeam";
+// import 'tw-elements';
+
 
 export default function Home( { teams } ) {
   return (

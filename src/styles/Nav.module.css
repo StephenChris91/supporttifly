@@ -18,33 +18,39 @@
 
 .nav {
   background-color: transparent !important;
-  /* Apply transparency */
   padding-left: 140px !important;
-  /* Apply left padding */
   padding-right: 140px !important;
-  /* Apply right padding */
   padding-top: 40px;
+
 }
 
 #navBtn {
   border-radius: 0;
 }
 
-#links>ul>div {
+/* #links{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  gap: 2000px;
+} */
+
+/* #links>li {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin: auto;
-}
+} */
 
-#links>ul>div>li {
+/* #links>ul>div>li {
   margin-right: 20px;
-}
+} */
 
-#links>ul>div>button {
+/* #links>ul>div>button {
   border-radius: 0 !important;
-}
+} */
 
 #headerText {
   margin: auto;
