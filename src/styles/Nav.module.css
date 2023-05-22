@@ -28,6 +28,14 @@
   border-radius: 0;
 }
 
+.pageTitle{
+  text-align: center;
+  font-size: 7rem;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
 /* #links{
   display: flex;
   justify-content: space-around;

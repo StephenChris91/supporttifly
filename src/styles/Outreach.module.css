@@ -1,6 +1,7 @@
 #campaignContainer{
   position: relative;
   height: 700px;
+  clear: both;
 }
 
 .overlay {

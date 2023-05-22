@@ -13,14 +13,16 @@ import { fetchGallery } from "../../utils/FetchGallery"
 
 const outreach = ( { gallery } ) => {
     return (
-        <div className="relative" id={styles.campaignContainer}>
-            <div className={styles.overlay}></div>
-            <div className="">
-                <Nav image='/logo-dark.png' btnColor='bg-gray-900'/>
-                <CampaignSection />
-                <GallerySection galleryData={gallery} />
+        <>
+            <div className="relative" id={styles.campaignContainer}>
+                {/* <div className={styles.overlay}></div> */}
+                <div className="">
+                    <Nav image='/logo-dark.png' btnColor='bg-gray-900'/>
+                    <CampaignSection />
+                </div>
             </div>
-        </div>
+            <GallerySection galleryData={gallery} />
+        </>
     )
 }
 
