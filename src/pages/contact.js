@@ -3,8 +3,8 @@ import HeaderOne from "@/components/HeaderOne"
 import ContactFormSection from "@/components/Sections/ContactFormSection"
 import ContactInfoSection from "@/components/Sections/ContactInfoSection"
 
-//styles
-import styles from '../styles/ContactInfo/ContactInfoSection.module.css'
+import styles from '../styles/Contact.module.css'
+
 
 
 

@@ -1,6 +1,49 @@
+.contactInfo{
+    width: 100%;
+    padding: 50px;
+    height: auto;
+    margin: auto;
+}
+
+
 .contactInfoDetailsWrapper{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: auto;
+    /* width: 98%; */
+}
+
+.title{
+    font-size: 5rem;
+}
+
+.contactInfoBox {
+    padding: 20px;
+    background-color: dark-gray;
+    /* border: 1px solid black; */
+    border-radius: 4px;
+    width: 300px;
+    height: auto;
+}
+
+.icon{
+    font-size: 3rem;
+}
+
+.icon1 {
+    color: #ef4444;
+    /* background-color: #fca5a5; */
+}
+
+.icon2{
+    color: #22c55e;
+}
+
+.icon3{
+    color: #3b82f6;
+}
+
+.contactInfoBox h2{
+    font-size: 1.5rem;
 }
