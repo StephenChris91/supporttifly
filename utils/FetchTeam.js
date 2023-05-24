@@ -1,6 +1,6 @@
 export const fetchTeam = async () => {
     try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getTeam`);
+        const res = await fetch(`https://localhost:3000/api/getTeam`);
         const { teams } = await res.json();
         console.log(teams);
         return teams;
