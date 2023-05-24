@@ -1,6 +1,6 @@
 export const fetchGallery = async () => {
     try {
-        const res = await fetch(`https://localhost:3000/api/getGallery`);
+        const res = await fetch(`http://localhost:3000/api/getGallery`);
         const { teams } = await res.json();
         console.log(teams);
         return teams;

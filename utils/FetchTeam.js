@@ -1,6 +1,6 @@
 export const fetchTeam = async () => {
     try {
-        const res = await fetch(`https://localhost:3000/api/getTeam`);
+        const res = await fetch(`http://localhost:3000/api/getTeam`);
         const { teams } = await res.json();
         console.log(teams);
         return teams;
