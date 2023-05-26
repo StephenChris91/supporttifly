@@ -29,16 +29,6 @@
 #small{
     width: 600px;
 }
-.volunteerBtn{
-    margin: auto;
-    border-radius: 0;
-    width: 300px;
-    padding: 10px;
-}
-
-.volunteerBtn:hover{
-    background-color: rgb(29,29,29);;
-}
 
 .volunteerBtn{
     margin-top: 5px;

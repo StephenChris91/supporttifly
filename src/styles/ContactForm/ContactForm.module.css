@@ -1,0 +1,50 @@
+#formSection{
+    width: 100%;
+    height: 400px;
+    padding: 20px;
+    margin-bottom: 80px;
+}
+
+
+.formContainer{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    margin: auto;
+
+}
+
+.formInputs{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+}
+
+#small, #base, #comment {
+    border-radius: 0;
+    margin-bottom: 40px;
+}
+
+#small{
+    width: 400px;
+}
+
+#comment{
+    width: 1210px !important;
+    margin-bottom: 20px;
+}
+
+.contactPageBtn{
+    margin: auto;
+    border-radius: 0;
+    width: 1210px;
+    padding: 10px;
+}
+
+.contactPageBtn:hover{
+    background-color: rgb(29,29,29);;
+}
