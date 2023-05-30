@@ -45,3 +45,58 @@
     font-size: 1.5em;
     font-weight: bold;
 }
+
+/* mobile */
+
+/* Styling for mobile screens only */
+@media (max-width: 600px) {
+    #teams {
+      width: 100%;
+      padding: 20px;
+      height: auto;
+      margin: auto;
+    }
+    
+    .teamsHeader {
+      text-align: center;
+      font-size: 2em;
+      color: rgb(29, 29, 29);
+      margin-bottom: 30px;
+    }
+    
+    .teamsWrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: auto;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    
+    .teams {
+      position: relative;
+      width: 100%;
+      height: auto;
+      color: white;
+      border-radius: 4px;
+      margin: 10px;
+      background-color: rgb(245, 243, 243);
+    }
+    
+    .teamsDetails {
+      width: 90%;
+      position: static;
+      top: initial;
+      left: initial;
+      background-color: rgb(245, 244, 244);
+      padding: 20px;
+      margin-right: 20px;
+      color: rgb(29, 29, 29);
+    }
+    
+    .teamsDetails h2 {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+  }
+  

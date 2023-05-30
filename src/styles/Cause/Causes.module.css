@@ -57,3 +57,72 @@
 .causesBtn:hover{
     background-color: rgb(29,29,29);;
 }
+
+
+/* mobile */
+/* Styling for mobile screens only */
+@media (max-width: 600px) {
+    #causes {
+      width: 100%;
+      padding: 20px;
+      height: auto;
+      margin: auto;
+      background-color: rgb(240, 239, 239);
+    }
+    
+    .causesHeader {
+      text-align: center;
+      font-size: 2em;
+      color: rgb(29, 29, 29);
+      margin-bottom: 30px;
+    }
+    
+    .causesWrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: auto;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    
+    .causes {
+      position: relative;
+      width: 90%;
+      max-width: 400px;
+      height: auto;
+      color: white;
+      margin: 10px;
+      text-align: center;
+      background-color: rgb(245, 243, 243);
+    }
+    
+    .causesDetails {
+      width: 100%;
+      position: static;
+      top: auto;
+      left: auto;
+      background-color: rgb(245, 244, 244);
+      padding: 20px;
+      margin-right: 0;
+      color: rgb(29, 29, 29);
+    }
+    
+    .causesDetails h2 {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    
+    .causesBtn {
+      margin: auto;
+      border-radius: 0;
+      width: 80%;
+      padding: 10px;
+    }
+    
+    .causesBtn:hover {
+      background-color: rgb(29, 29, 29);
+      color: white;
+    }
+  }
+  

@@ -1,9 +1,8 @@
 #headerContainer {
   position: relative;
   height: 700px;
-
+  z-index: 1; /* Add z-index to control stacking order */
 }
-
 .overlay {
   position: absolute;
   top: 0;
@@ -35,30 +34,6 @@
   font-weight: bold;
   margin-top: 50px;
 }
-
-/* #links{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: auto;
-  gap: 2000px;
-} */
-
-/* #links>li {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: auto;
-} */
-
-/* #links>ul>div>li {
-  margin-right: 20px;
-} */
-
-/* #links>ul>div>button {
-  border-radius: 0 !important;
-} */
 
 #headerText {
   margin: auto;
@@ -137,17 +112,8 @@
   }
 }
 
-/* Apply slide-in animation when the element has slide-in class */
-.slidein {
-  animation: slideIn 0.3s ease-in-out;
-}
 
-/* Apply slide-out animation when the element has slide-out class */
-.slideout {
-  animation: slideOut 0.3s ease-in-out;
-}
-
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 600px) {
   .nav {
     background-color: transparent !important;
     /* Apply transparency */
@@ -194,9 +160,10 @@
   }
 
   .aboutBox {
-    height: 300px;
+    height: 320px;
     width: 300px;
-    padding: 10px;
+    padding: 20px;
+    margin-bottom: -50px;
   }
 
 }

@@ -40,3 +40,57 @@
 .volunteerBtn:hover{
     background-color: rgb(29,29,29);;
 }
+
+/* mobile */
+/* Styling for mobile screens only */
+@media (max-width: 600px) {
+    #volunteer {
+      width: 100%;
+      padding: 20px;
+      height: auto;
+      margin: auto;
+      background-color: rgb(240, 239, 239);
+    }
+    
+    .volunteerWrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      margin: auto;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    
+    #small, #base, #comment {
+      border-radius: 0;
+      width: 90%;
+    }
+    
+    .volunteerImage {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+    
+    .volunteerForm h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    
+    #small {
+      width: 100%;
+    }
+    
+    .volunteerBtn {
+      margin-top: 5px;
+      border-radius: 0;
+      width: 100%;
+      padding: 10px;
+    }
+    
+    .volunteerBtn:hover {
+      background-color: rgb(29, 29, 29);
+      color: white;
+    }
+  }
+  
