@@ -1,6 +1,6 @@
 import { sanityClient } from "../../../sanity";
 import imageUrlBuilder from "@sanity/image-url";
-import { Container, useMediaQuery } from "@chakra-ui/react";
+import { Container, useMediaQuery, SimpleGrid } from "@chakra-ui/react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
@@ -51,7 +51,7 @@ const TeamSection = ({ teamData }) => {
   return (
     <section id={styles.teams}>
       <h2 className={styles.teamsHeader}>Our Team</h2>
-      <div className={styles.teamsWrapper}>
+      <SimpleGrid columns={3} spacing={1}>
         {teamData &&
           teamData.map((team) => (
             <div key={team._id} className={styles.teams}>
@@ -68,7 +68,7 @@ const TeamSection = ({ teamData }) => {
               </div>
             </div>
           ))}
-      </div>
+      </SimpleGrid>
     </section>
   );
 };

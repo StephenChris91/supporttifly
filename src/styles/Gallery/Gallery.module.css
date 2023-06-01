@@ -1,59 +1,105 @@
-#gallery{
+#gallery {
     width: 100%;
     padding: 50px;
     height: auto;
     margin: auto;
     background-color: rgb(240, 239, 239);
-}
-
-.galleryHeader{
+  }
+  
+  .galleryHeader {
     text-align: center;
     font-size: 3em;
-    color: rgb(29,29,29);
+    color: rgb(29, 29, 29);
     margin-bottom: 50px;
-}
-
-.galleryWrapper{
+  }
+  
+  .galleryWrapper {
     display: flex;
-    place-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: auto;
     width: 98%;
     margin-bottom: 50px;
-}
-
-.gallery{
+  }
+  
+  .gallery {
     position: relative;
-    width: 400px;
-    height: 550px;
+    width: 90%;
+    max-width: 400px;
+    height: auto;
     color: white;
     margin: 10px;
-    /* text-align: center; */
     background-color: rgb(245, 243, 243);
-}
-
-.galleryDetails{
-    width: 90%;
-    position: absolute;
-    top: 300px;
-    left: 20px;
+  }
+  
+  .galleryDetails {
+    width: 100%;
+    position: static;
+    top: auto;
+    left: auto;
     background-color: rgb(245, 244, 244);
     padding: 20px;
-    margin-right: 20px;
-    color: rgb(29,29,29);
-}
-
-.galleryDetails h2{
+    margin-right: 0;
+    color: rgb(29, 29, 29);
+  }
+  
+  .galleryDetails h2 {
     font-size: 1.5em;
     font-weight: bold;
-}
-
-.galleryBtn{
+  }
+  
+  .galleryBtn {
     margin: auto;
     border-radius: 0;
-    width: 300px;
+    width: 80%;
     padding: 10px;
-}
+  }
+  
+  .galleryBtn:hover {
+    background-color: rgb(29, 29, 29);
+    color: white;
+  }
+  
+  /* Mobile Screen Styling */
+  @media (max-width: 600px) {
+    #gallery {
+      padding: 20px;
+      margin-top: 300px;
 
-.galleryBtn:hover{
-    background-color: rgb(29,29,29);;
-}
+    }
+  
+    .galleryHeader {
+      font-size: 2em;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+  
+    .galleryWrapper {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  
+    .gallery {
+      width: 90%;
+      max-width: 400px;
+      height: auto;
+      margin: 10px;
+    }
+  
+    .galleryDetails {
+      width: 100%;
+      position: static;
+      top: auto;
+      left: auto;
+      margin-right: 0;
+    }
+  
+    .galleryDetails h2 {
+      font-size: 1.2em;
+    }
+  
+    .galleryBtn {
+      width: 80%;
+    }
+  }
+  
