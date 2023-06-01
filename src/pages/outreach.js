@@ -17,7 +17,7 @@ const outreach = ( { gallery } ) => {
             <div className="relative" id={styles.campaignContainer}>
                 {/* <div className={styles.overlay}></div> */}
                 <div className="">
-                    <Nav image='/logo-dark.png' btnColor='bg-gray-900'/>
+                    <Nav image='/logo-dark.png' color='gray.900'/>
                     <CampaignSection />
                 </div>
             </div>
