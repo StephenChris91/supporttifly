@@ -73,7 +73,9 @@ const Nav = ({ image, color, linkColor }) => {
                 transition={{ duration: 0.3 }}
               >
                 <Flex direction="column" align="center" py={4}>
-                  <Link href="/" py={2} passHref></Link>
+                  <Link href="/" py={2} passHref>
+                    Home
+                  </Link>
                   <Link href="/outreach" py={2} passHref>
                     Outreach
                   </Link>
