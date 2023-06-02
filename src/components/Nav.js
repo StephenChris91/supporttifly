@@ -57,7 +57,7 @@ const Nav = ({ image, color, linkColor }) => {
               left={0}
               right={0}
               bottom={0}
-              bg="rgba(229, 62, 62, 0.8)"
+              bg="rgba(229, 62, 62)"
               zIndex={999}
               display="flex"
               justifyContent="center"
@@ -73,21 +73,14 @@ const Nav = ({ image, color, linkColor }) => {
                 transition={{ duration: 0.3 }}
               >
                 <Flex direction="column" align="center" py={4}>
-                  <Link href="/" py={2} passHref>
-                    Home
-                  </Link>
+                  <Link href="/" py={2} passHref></Link>
                   <Link href="/outreach" py={2} passHref>
                     Outreach
                   </Link>
                   <Link href="/contact" py={2} passHref>
                     Contact
                   </Link>
-                  <Button
-                    bg={isOpen ? color : "black"}
-                    color="white"
-                    width="100%"
-                    ml={4}
-                  >
+                  <Button bg="black" color="white" width="100%" ml={4}>
                     Donate
                   </Button>
                 </Flex>
@@ -100,24 +93,20 @@ const Nav = ({ image, color, linkColor }) => {
         <Box
           display={{
             base: "none",
-            md: "flex",
+            lg: "flex",
             align: "center",
             color: "white",
           }}
         >
           <Box>
-            <Flex
-              align="center"
-              color={linkColor}
-              justifyContent="space-between"
-            >
-              <Link href="/" p={8}>
+            <Flex align="center" justifyContent="space-between" color="white">
+              <Link href="/" px={3} p={2}>
                 Home
               </Link>
-              <Link href="/outreach" p={2} mr={3}>
+              <Link href="/outreach" p={2}>
                 Outreach
               </Link>
-              <Link href="/contact" p={2} mr={3}>
+              <Link href="/contact" p={2}>
                 Contact
               </Link>
               {/* Donate Button */}

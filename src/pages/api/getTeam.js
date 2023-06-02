@@ -1,4 +1,4 @@
-import { groq } from 'next-sanity';
+import { groq } from "next-sanity";
 import { sanityClient } from "../../../sanity";
 
 const query = groq`*[_type == "teams"] {
@@ -7,6 +7,7 @@ const query = groq`*[_type == "teams"] {
   title,
   position,
   image,
+  socialMediaIcons
 }`;
 
 export default async function handler(req, res) {
@@ -14,7 +15,7 @@ export default async function handler(req, res) {
     const teams = await sanityClient.fetch(query);
     res.status(200).json({ teams });
   } catch (error) {
-    console.error('Error fetching teams:', error);
-    res.status(500).json({ error: 'Failed to fetch teams' });
+    console.error("Error fetching teams:", error);
+    res.status(500).json({ error: "Failed to fetch teams" });
   }
 }
