@@ -58,18 +58,22 @@
       justify-content: center;
       align-items: flex-start;
       margin: auto;
-      width: 100%;
+      min-width: 100%;
       margin-bottom: 30px;
     }
     
     #small, #base, #comment {
       border-radius: 0;
-      width: 90%;
+      width: 100%;
     }
     
     .volunteerImage {
       margin-right: 0;
       margin-bottom: 20px;
+    }
+
+    .volunteerForm{
+      width: 100%;
     }
     
     .volunteerForm h2 {

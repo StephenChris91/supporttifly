@@ -12,9 +12,9 @@ const FooterSection = () => {
     <>
       <Footer>
         <div id={styles.footer} className="w-full px-20">
-          <div id={styles.footerWrapper} className="sm:flex-col ">
+          <div id={styles.footerWrapper} className="sm:flex-col sm:items-start">
             <div>
-              <Footer.LinkGroup col={true}>
+              <Footer.LinkGroup col={true} className='col'>
                 <Image
                   src="/logo.png"
                   alt="footer-logo"
@@ -34,7 +34,7 @@ const FooterSection = () => {
                 </div>
               </Footer.LinkGroup>
             </div>
-            <div className="sm:items-start">
+            <div className="col flex flex-col sm:items-start">
               <Footer.Title title="NAVIGATION" />
               <Footer.LinkGroup col={true}>
                 <Footer.Link href="/">Home</Footer.Link>
@@ -44,7 +44,7 @@ const FooterSection = () => {
             </div>
             <div>
               <Footer.Title title="CONTACT" />
-              <Footer.LinkGroup col={true}>
+              <Footer.LinkGroup col={true} className='col'>
                 <p>
                   Ariwola House, Opposite Ansarudeen School, Sango-Eleyele Road,
                   Ibadan, Oyo State, Nigeria

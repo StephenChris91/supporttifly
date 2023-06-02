@@ -5,3 +5,7 @@
     place-items: center;
     margin: auto;
 }
+
+@media (max-width: 600px) {
+    
+}
