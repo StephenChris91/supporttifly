@@ -26,7 +26,8 @@ const Nav = ({ image, color }) => {
       justify="space-between"
       wrap="wrap"
       padding={6}
-      bg={isMobile ? "rgba(229, 62, 62, 0.8)" : "transparent"}
+      // bg={isMobile ? "rgba(229, 62, 62, 0.8)" : "transparent"}
+      // zIndex={9999}
     >
       <Flex align="center">
         <Link href="/">
@@ -45,13 +46,19 @@ const Nav = ({ image, color }) => {
           {/* Mobile Menu */}
           {isOpen && (
             <Box
-              position="absolute"
-              top="50%"
-              left="50%"
-              // right={0}
-              bg={isOpen ? "rgba(255, 255, 255, 0.95)" : "transparent"}
-              width="full"
+              position="fixed"
+              top={0}
+              left={0}
+              right={0}
+              bottom={0}
+              bg="rgba(229, 62, 62, 0.8)"
               zIndex={999}
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              color="white"
+              fontWeight="700"
+              fontSize="3rem"
             >
               <motion.div
                 initial="hidden"
@@ -69,6 +76,9 @@ const Nav = ({ image, color }) => {
                   <Link href="/contact" py={2} passHref>
                     Contact
                   </Link>
+                  <Button bg={color} color="white" width="100%" ml={4}>
+                    Donate
+                  </Button>
                 </Flex>
               </motion.div>
             </Box>
@@ -80,20 +90,22 @@ const Nav = ({ image, color }) => {
           display={{
             base: "none",
             md: "flex",
-            align: "space-between",
+            align: "center",
             color: "white",
           }}
         >
           <Box>
-            <Link href="/" p={2} mr={3}>
-              Home
-            </Link>
-            <Link href="/outreach" p={2} mr={3}>
-              Outreach
-            </Link>
-            <Link href="/contact" p={2} mr={3}>
-              Contact
-            </Link>
+            <Flex align="center">
+              <Link href="/" p={2} mr={3}>
+                Home
+              </Link>
+              <Link href="/outreach" p={2} mr={3}>
+                Outreach
+              </Link>
+              <Link href="/contact" p={2} mr={3}>
+                Contact
+              </Link>
+            </Flex>
             {/* Donate Button */}
             <Button bg={color} color="white" ml={4}>
               Donate
