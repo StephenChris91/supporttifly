@@ -44,38 +44,42 @@ const TeamSection = ({ teamData }) => {
                       <p>{team.title}</p>
                       <h3>{team.position}</h3>
                       <div className="flex items-start mt-20 space-around text-gray-500">
-                        {team.socialMediaIcons.map((icon) => {
-                          console.log(icon.link);
-                          let socialMediaIcon;
-                          if (icon.link.includes("instagram.com")) {
-                            socialMediaIcon = FaInstagram;
-                          } else if (icon.link.includes("facebook.com")) {
-                            socialMediaIcon = FaFacebook;
-                          } else if (icon.link.includes("twitter.com")) {
-                            socialMediaIcon = FaTwitter;
-                          } else {
-                            // Default icon or handle unrecognized social media types
-                            socialMediaIcon = null; // You can set a default icon or handle unrecognized types
-                          }
+                        {team.socialMediaIcons
+                          ? team.socialMediaIcons.map((icon) => {
+                              console.log(icon.link);
+                              let socialMediaIcon;
+                              if (icon.link.includes("instagram.com")) {
+                                socialMediaIcon = FaInstagram;
+                              } else if (icon.link.includes("facebook.com")) {
+                                socialMediaIcon = FaFacebook;
+                              } else if (icon.link.includes("twitter.com")) {
+                                socialMediaIcon = FaTwitter;
+                              } else {
+                                // Default icon or handle unrecognized social media types
+                                socialMediaIcon = null; // You can set a default icon or handle unrecognized types
+                              }
 
-                          // Wrap the icon with an anchor tag to make it clickable
-                          const IconComponent = socialMediaIcon;
-                          return (
-                            <Box
-                              as={IconComponent}
-                              key={icon.link}
-                              bg="gray.800"
-                              padding={1}
-                              color="gray.200" // Set the color using Chakra UI color values
-                              fontSize="34px" // Set the font size using Chakra UI size values
-                              marginTop="10px"
-                              marginRight="10px"
-                              cursor="pointer" // Add cursor pointer to indicate it's clickable
-                              _hover={{ color: "blue.700" }} // Apply hover color using Chakra UI color values
-                              onClick={() => window.open(icon.link, "_blank")}
-                            />
-                          );
-                        })}
+                              // Wrap the icon with an anchor tag to make it clickable
+                              const IconComponent = socialMediaIcon;
+                              return (
+                                <Box
+                                  as={IconComponent}
+                                  key={icon.link}
+                                  bg="gray.800"
+                                  padding={1}
+                                  color="gray.200" // Set the color using Chakra UI color values
+                                  fontSize="34px" // Set the font size using Chakra UI size values
+                                  marginTop="10px"
+                                  marginRight="10px"
+                                  cursor="pointer" // Add cursor pointer to indicate it's clickable
+                                  _hover={{ color: "blue.700" }} // Apply hover color using Chakra UI color values
+                                  onClick={() =>
+                                    window.open(icon.link, "_blank")
+                                  }
+                                />
+                              );
+                            })
+                          : ""}
                       </div>
                     </div>
                   </div>
@@ -105,38 +109,39 @@ const TeamSection = ({ teamData }) => {
                 <p>{team.title}</p>
                 <h3>{team.position}</h3>
                 <div className="flex items-start mt-20 space-around text-gray-500">
-                  {team.socialMediaIcons.map((icon) => {
-                    console.log(icon.link);
-                    let socialMediaIcon;
-                    if (icon.link.includes("instagram.com")) {
-                      socialMediaIcon = FaInstagram;
-                    } else if (icon.link.includes("facebook.com")) {
-                      socialMediaIcon = FaFacebook;
-                    } else if (icon.link.includes("twitter.com")) {
-                      socialMediaIcon = FaTwitter;
-                    } else {
-                      // Default icon or handle unrecognized social media types
-                      socialMediaIcon = null; // You can set a default icon or handle unrecognized types
-                    }
+                  {team.socialMediaIcons &&
+                    team.socialMediaIcons.map((icon) => {
+                      console.log(icon.link);
+                      let socialMediaIcon;
+                      if (icon.link.includes("instagram.com")) {
+                        socialMediaIcon = FaInstagram;
+                      } else if (icon.link.includes("facebook.com")) {
+                        socialMediaIcon = FaFacebook;
+                      } else if (icon.link.includes("twitter.com")) {
+                        socialMediaIcon = FaTwitter;
+                      } else {
+                        // Default icon or handle unrecognized social media types
+                        socialMediaIcon = null; // You can set a default icon or handle unrecognized types
+                      }
 
-                    // Wrap the icon with an anchor tag to make it clickable
-                    const IconComponent = socialMediaIcon;
-                    return (
-                      <Box
-                        as={IconComponent}
-                        key={icon.link}
-                        bg="gray.800"
-                        padding={1}
-                        color="gray.200" // Set the color using Chakra UI color values
-                        fontSize="34px" // Set the font size using Chakra UI size values
-                        marginTop="10px"
-                        marginRight="10px"
-                        cursor="pointer" // Add cursor pointer to indicate it's clickable
-                        _hover={{ color: "blue.700" }} // Apply hover color using Chakra UI color values
-                        onClick={() => window.open(icon.link, "_blank")}
-                      />
-                    );
-                  })}
+                      // Wrap the icon with an anchor tag to make it clickable
+                      const IconComponent = socialMediaIcon;
+                      return (
+                        <Box
+                          as={IconComponent}
+                          key={icon.link}
+                          bg="gray.800"
+                          padding={1}
+                          color="gray.200" // Set the color using Chakra UI color values
+                          fontSize="34px" // Set the font size using Chakra UI size values
+                          marginTop="10px"
+                          marginRight="10px"
+                          cursor="pointer" // Add cursor pointer to indicate it's clickable
+                          _hover={{ color: "blue.700" }} // Apply hover color using Chakra UI color values
+                          onClick={() => window.open(icon.link, "_blank")}
+                        />
+                      );
+                    })}
                 </div>
               </div>
             </div>

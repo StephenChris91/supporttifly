@@ -63,7 +63,7 @@
 .aboutBoxes {
   position: absolute;
   top: 550px;
-  left: 20%;
+  left: 12%;
   display: flex;
   justify-content: space-between;
   margin: auto;
