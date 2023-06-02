@@ -5,6 +5,13 @@
   /* Add z-index to control stacking order */
 }
 
+/* a{
+  margin-right: 20px;
+} */
+
+.css-y4r0ls a{
+  margin-right: 20px;
+}
 .overlay {
   position: absolute;
   top: 0;

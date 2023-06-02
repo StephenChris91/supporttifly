@@ -10,7 +10,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const Nav = ({ image, color }) => {
+const Nav = ({ image, color, linkColor }) => {
   const [isMobile] = useMediaQuery("(max-width: 600px)");
   const { isOpen, onToggle } = useDisclosure();
 
@@ -39,7 +39,13 @@ const Nav = ({ image, color }) => {
         // Mobile Navbar
         <Box display={{ base: "block", md: "none" }} position="relative">
           {/* Toggle Button */}
-          <Button variant="unstyled" p={2} onClick={onToggle}>
+          <Button
+            color={linkColor}
+            variant="unstyled"
+            p={2}
+            onClick={onToggle}
+            zIndex={9999}
+          >
             {isOpen ? <CloseIcon w={6} h={6} /> : <HamburgerIcon w={6} h={6} />}
           </Button>
 
@@ -76,7 +82,12 @@ const Nav = ({ image, color }) => {
                   <Link href="/contact" py={2} passHref>
                     Contact
                   </Link>
-                  <Button bg={color} color="white" width="100%" ml={4}>
+                  <Button
+                    bg={isOpen ? color : "black"}
+                    color="white"
+                    width="100%"
+                    ml={4}
+                  >
                     Donate
                   </Button>
                 </Flex>
@@ -95,8 +106,12 @@ const Nav = ({ image, color }) => {
           }}
         >
           <Box>
-            <Flex align="center">
-              <Link href="/" p={2} mr={3}>
+            <Flex
+              align="center"
+              color={linkColor}
+              justifyContent="space-between"
+            >
+              <Link href="/" p={8}>
                 Home
               </Link>
               <Link href="/outreach" p={2} mr={3}>
@@ -105,11 +120,11 @@ const Nav = ({ image, color }) => {
               <Link href="/contact" p={2} mr={3}>
                 Contact
               </Link>
+              {/* Donate Button */}
+              <Button bg={color} borderRadius={0} color="white" ml={4}>
+                Donate
+              </Button>
             </Flex>
-            {/* Donate Button */}
-            <Button bg={color} color="white" ml={4}>
-              Donate
-            </Button>
           </Box>
         </Box>
       )}

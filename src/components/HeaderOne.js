@@ -11,7 +11,7 @@ const HeaderOne = ({ bg, title, component }) => {
       />
       <div className={styles.overlay}></div>
       <div className="absolute top-0 left-0 w-full h-full flex flex-col">
-        <Nav image="/logo.png" color="red.500" />
+        <Nav linkColor="white" image="/logo.png" color="red.500" />
         <h1 className={styles.pageTitle}>{title}</h1>
         {component}
       </div>

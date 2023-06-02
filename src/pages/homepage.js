@@ -8,16 +8,17 @@ import AboutSection from "@/components/Sections/AboutSection";
 const Homepage = ({ teamData }) => {
   return (
     <>
-      <HeaderOne bg='/headerOneBg.png' component={<AboutSection/>}/>
+      <HeaderOne
+        linkColor="white"
+        bg="/headerOneBg.png"
+        component={<AboutSection />}
+      />
       <Features />
       <CauseSection />
-      <TeamSection teamData={teamData}/>
+      <TeamSection teamData={teamData} />
       <ContactSection />
     </>
   );
 };
-
-
-
 
 export default Homepage;
