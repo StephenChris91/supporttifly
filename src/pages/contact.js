@@ -8,7 +8,7 @@ import styles from "../styles/Contact.module.css";
 const contact = () => {
   return (
     <>
-      <HeaderOne bg="/images/contactBg.png" title="Contact Us" />
+      <HeaderOne image='/logo-dark.png' bg="/images/contactBg.png" title="Contact Us" />
       <div className={styles.infoWrapper}>
         <ContactInfoSection />
         <ContactFormSection />

@@ -154,7 +154,9 @@
   }
 
   #headerTextMain {
-    font-size: 4rem;
+    font-size: 3rem;
+    margin-top: -50px;
+
   }
 
   .aboutBoxes {
