@@ -7,7 +7,33 @@ import Image from "next/image";
 //icons
 import { BsFacebook, BsLinkedin, BsTwitter, BsInstagram } from "react-icons/bs";
 
+//paystack
+import { usePaystackPayment } from 'react-paystack';
+
+
 const FooterSection = () => {
+
+  const config = {
+    reference: (new Date()).getTime().toString(),
+    email: "stephenchriscodes@gmail.com",
+    amount: 20000, //Amount is in the country's lowest currency. E.g Kobo, so 20000 kobo = N200
+    publicKey: 'pk_test_a0705565ee2275b926b58433939e4c657c600cbe',
+};
+
+// you can call this function anything
+const onSuccess = (reference) => {
+  // Implementation for whatever you want to do with reference and after success call.
+  console.log(reference);
+};
+
+// you can call this function anything
+const onClose = () => {
+  // implementation for  whatever you want to do when the Paystack dialog closed.
+  console.log('closed')
+}
+
+      const initializePayment = usePaystackPayment(config);
+
   return (
     <>
       <Footer>
@@ -55,6 +81,8 @@ const FooterSection = () => {
             </div>
             <div>
               <Button
+              onClick={() => {
+                initializePayment(onSuccess, onClose)}}
                 className={[
                   "bg-red-700 text-lg text-bold w-full",
                   styles.footerBtn, // Add slide-in and slide-out classes based on isMenuOpen state
