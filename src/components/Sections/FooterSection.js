@@ -73,7 +73,7 @@ const FooterSection = () => {
                   Ariwola House, Opposite Ansarudeen School, Sango-Eleyele Road,
                   Ibadan, Oyo State, Nigeria
                 </p>
-                <p>0805 422 4781</p>
+                <p>0805 422 4781</p> 
                 <p>flysuppng@gmail.com</p>
               </Footer.LinkGroup>
             </div>
