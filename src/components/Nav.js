@@ -10,10 +10,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-
-import { usePaystackPayment } from 'react-paystack';
-
-
+import { usePaystackPayment } from "react-paystack";
 
 const Nav = ({ image, color, linkColor }) => {
   const [isMobile] = useMediaQuery("(max-width: 600px)");
@@ -24,28 +21,26 @@ const Nav = ({ image, color, linkColor }) => {
     visible: { y: 0, opacity: 1 },
   };
 
-  
   const config = {
-    reference: (new Date()).getTime().toString(),
+    reference: new Date().getTime().toString(),
     email: "stephenchriscodes@gmail.com",
     amount: 20000, //Amount is in the country's lowest currency. E.g Kobo, so 20000 kobo = N200
-    publicKey: 'pk_test_a0705565ee2275b926b58433939e4c657c600cbe',
-};
+    publicKey: "pk_test_a0705565ee2275b926b58433939e4c657c600cbe",
+  };
 
-// you can call this function anything
-const onSuccess = (reference) => {
-  // Implementation for whatever you want to do with reference and after success call.
-  console.log(reference);
-};
+  // you can call this function anything
+  const onSuccess = (reference) => {
+    // Implementation for whatever you want to do with reference and after success call.
+    console.log(reference);
+  };
 
-// you can call this function anything
-const onClose = () => {
-  // implementation for  whatever you want to do when the Paystack dialog closed.
-  console.log('closed')
-}
+  // you can call this function anything
+  const onClose = () => {
+    // implementation for  whatever you want to do when the Paystack dialog closed.
+    console.log("closed");
+  };
 
-      const initializePayment = usePaystackPayment(config);
-
+  const initializePayment = usePaystackPayment(config);
 
   return (
     <Flex
@@ -110,12 +105,15 @@ const onClose = () => {
                   <Link href="/contact" py={2} passHref>
                     Contact
                   </Link>
-                  <Button onClick={() => {
-                    initializePayment(onSuccess, onClose)}} 
-                    bg="black" 
-                    color="white" 
-                    width="100%" 
-                    ml={4}>
+                  <Button
+                    onClick={() => {
+                      initializePayment(onSuccess, onClose);
+                    }}
+                    bg="black"
+                    color="white"
+                    width="100%"
+                    ml={4}
+                  >
                     Donate
                   </Button>
                 </Flex>
@@ -133,27 +131,32 @@ const onClose = () => {
             color: "white",
           }}
         >
-          <Box>
-            <Flex align="center" justifyContent="space-between" color="white">
-              <Link href="/" px={3} p={2}>
-                Home
-              </Link>
-              <Link href="/outreach" p={2}>
-                Outreach
-              </Link>
-              <Link href="/contact" p={2}>
-                Contact
-              </Link>
-              {/* Donate Button */}
-              <Button onClick={() => {
-                    initializePayment(onSuccess, onClose)}} 
-                    bg={isOpen ? 'black' : color}
-                    color="white" 
-                    width="100%" 
-                    ml={4}>
-                    Donate
-                  </Button>
-            </Flex>
+          <Box
+            display="flex"
+            alignItems="center"
+            color="white"
+            justify="space-between"
+          >
+            <Link href="/" p={2} className="mr-5">
+              Home
+            </Link>
+            <Link href="/outreach" p={2} className="mr-5">
+              Outreach
+            </Link>
+            <Link href="/contact" p={2} className="mr-5">
+              Contact
+            </Link>
+            <Button
+              onClick={() => {
+                initializePayment(onSuccess, onClose);
+              }}
+              bg={isOpen ? "black" : color}
+              color="white"
+              width="100%"
+              ml={4}
+            >
+              Donate
+            </Button>
           </Box>
         </Box>
       )}
