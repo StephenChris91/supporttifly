@@ -1,9 +1,12 @@
+import { useState } from "react";
+
 import { sanityClient } from "../../../sanity";
 import imageUrlBuilder from "@sanity/image-url";
 import { Container, useMediaQuery, SimpleGrid } from "@chakra-ui/react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
+import Skeleton from "react-loading-skeleton";
 
 import styles from "../../styles/Team/Team.module.css";
 import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
@@ -14,6 +17,8 @@ import { team } from "../../data/team";
 
 const TeamSection = ({ teamData }) => {
   const [isMobile] = useMediaQuery("(max-width: 600px)");
+
+  const [isLoading, setIsLoading] = useState(true);
 
   const getImageUrl = (imageRef) => {
     const builder = imageUrlBuilder(sanityClient);
@@ -31,12 +36,19 @@ const TeamSection = ({ teamData }) => {
               team.map((member, index) => (
                 <SwiperSlide key={index}>
                   <div className={styles.teams}>
-                    <Image
-                      width={400}
-                      height={400}
-                      src={member.image}
-                      alt={member.name}
-                    />
+                    {isLoading ? (
+                      <div>
+                        <Skeleton width={200} height={20} />
+                        <Skeleton width={300} height={200} />
+                      </div>
+                    ) : (
+                      <Image
+                        width={400}
+                        height={400}
+                        src={member.image}
+                        alt={member.name}
+                      />
+                    )}
                     <div className={styles.teamsDetails}>
                       <h2 className={styles.teamsName}>{member.name}</h2>
                       <p>{member.title}</p>
@@ -95,6 +107,7 @@ const TeamSection = ({ teamData }) => {
                 height={400}
                 src={member.image}
                 alt={member.name}
+                loading="lazy"
               />
               <div className={styles.teamsDetails}>
                 <h2 className={styles.teamsName}>{member.name}</h2>
