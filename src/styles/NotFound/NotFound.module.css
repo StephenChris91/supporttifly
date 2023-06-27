@@ -1,0 +1,30 @@
+.error{
+    
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.error > div {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    margin-top: 100px;
+}
+
+.error > div > h1 {
+    font-weight: bold;
+    font-size: 18rem;
+    margin-bottom: 0;
+}
+
+.error > div > p {
+    font-size: 18px;
+}
+
+.error > div > a {
+    padding: 20px;
+    background-color: red;
+    color: #fff;
+    margin-top: 15px;
+}
