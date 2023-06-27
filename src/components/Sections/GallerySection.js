@@ -26,6 +26,7 @@ const GallerySection = ({ galleryData }) => {
                 height={400}
                 src={getImageUrl(gallery.image.asset._ref)}
                 alt={gallery.name}
+                loading="lazy"
               />
               <div className={styles.galleryDetails}>
                 <h2 className={styles.galleryTitle}>{gallery.title}</h2>
@@ -44,6 +45,7 @@ const GallerySection = ({ galleryData }) => {
                       height={400}
                       src={getImageUrl(gallery.image.asset._ref)}
                       alt={gallery.name}
+                      loading="lazy"
                     />
                     <div className={styles.galleryDetails}>
                       <h2 className={styles.galleryTitle}>{gallery.title}</h2>

@@ -14,6 +14,7 @@ const CauseSection = () => {
             alt="causeImg"
             width={500}
             height={600}
+            loading="lazy"
           />
           <div className={styles.causesDetails}>
             <h2>Feed The Poor </h2>
@@ -27,6 +28,7 @@ const CauseSection = () => {
             alt="causeImg"
             width={500}
             height={600}
+            loading="lazy"
           />
           <div className={styles.causesDetails}>
             <h2>Health Care</h2>
@@ -40,6 +42,7 @@ const CauseSection = () => {
             alt="causeImg"
             width={500}
             height={600}
+            loading="lazy"
           />
           <div className={styles.causesDetails}>
             <h2>EduCare</h2>

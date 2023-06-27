@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { sanityClient } from "../../../sanity";
 import imageUrlBuilder from "@sanity/image-url";
@@ -11,6 +11,7 @@ import Skeleton from "react-loading-skeleton";
 import styles from "../../styles/Team/Team.module.css";
 import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
 import { Box } from "@chakra-ui/react";
+import 'react-loading-skeleton/dist/skeleton.css'
 
 //import team data
 import { team } from "../../data/team";
@@ -25,6 +26,10 @@ const TeamSection = ({ teamData }) => {
     const imageUrl = builder.image(imageRef).url();
     return imageUrl;
   };
+
+  useEffect(() => {
+    setIsLoading(false);
+  }, []);
 
   if (isMobile) {
     return (
