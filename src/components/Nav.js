@@ -10,7 +10,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-import { usePaystackPayment } from "react-paystack";
+//styles
+import styles from "../styles/Nav.module.css";
 
 const Nav = ({ image, color, linkColor }) => {
   const [isMobile] = useMediaQuery("(max-width: 600px)");
@@ -20,27 +21,6 @@ const Nav = ({ image, color, linkColor }) => {
     hidden: { y: "-100%", opacity: 0 },
     visible: { y: 0, opacity: 1 },
   };
-
-  const config = {
-    reference: new Date().getTime().toString(),
-    email: "stephenchriscodes@gmail.com",
-    amount: 20000, //Amount is in the country's lowest currency. E.g Kobo, so 20000 kobo = N200
-    publicKey: "pk_test_a0705565ee2275b926b58433939e4c657c600cbe",
-  };
-
-  // you can call this function anything
-  const onSuccess = (reference) => {
-    // Implementation for whatever you want to do with reference and after success call.
-    console.log(reference);
-  };
-
-  // you can call this function anything
-  const onClose = () => {
-    // implementation for  whatever you want to do when the Paystack dialog closed.
-    console.log("closed");
-  };
-
-  const initializePayment = usePaystackPayment(config);
 
   return (
     <Flex
@@ -105,17 +85,11 @@ const Nav = ({ image, color, linkColor }) => {
                   <Link href="/contact" py={2} passHref>
                     Contact
                   </Link>
-                  <Button
-                    onClick={() => {
-                      initializePayment(onSuccess, onClose);
-                    }}
-                    bg="black"
-                    color="white"
-                    width="100%"
-                    ml={4}
-                  >
-                    Donate
-                  </Button>
+                  <Link href="/donation" passHref>
+                    <Button bg="black" color="white" width="100%" ml={4}>
+                      Donate
+                    </Button>
+                  </Link>
                 </Flex>
               </motion.div>
             </Box>
@@ -137,26 +111,26 @@ const Nav = ({ image, color, linkColor }) => {
             color="white"
             justify="space-between"
           >
-            <Link href="/" p={2} className="mr-5">
+            <Link href="/" p={2} color={`${color}`}>
               Home
             </Link>
-            <Link href="/outreach" p={2} className="mr-5">
+            <Link href="/outreach" p={2} className={`${color}`}>
               Outreach
             </Link>
-            <Link href="/contact" p={2} className="mr-5">
+            <Link href="/contact" p={2} className={`${color}`}>
               Contact
             </Link>
-            <Button
-              onClick={() => {
-                initializePayment(onSuccess, onClose);
-              }}
-              bg={isOpen ? "black" : color}
-              color="white"
-              width="100%"
-              ml={4}
-            >
-              Donate
-            </Button>
+            <Link href="/donation" passHref>
+              <Button
+                bg={isOpen ? "black" : color}
+                color="white"
+                width="100%"
+                ml={4}
+                id={styles.navBtn}
+              >
+                Donate
+              </Button>{" "}
+            </Link>
           </Box>
         </Box>
       )}

@@ -1,5 +1,6 @@
 import styles from "../../styles/Cause/Causes.module.css";
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "flowbite-react";
 
 const CauseSection = () => {
@@ -47,14 +48,16 @@ const CauseSection = () => {
           </div>
         </div>
       </div>
-      <Button
-        className={[
-          "bg-red-700 text-lg text-bold",
-          styles.causesBtn, // Add slide-in and slide-out classes based on isMenuOpen state
-        ].join(" ")}
-      >
-        Donate
-      </Button>{" "}
+      <Link href="/donation" passHref>
+        <Button
+          className={[
+            "bg-red-700 text-lg text-bold",
+            styles.causesBtn, // Add slide-in and slide-out classes based on isMenuOpen state
+          ].join(" ")}
+        >
+          Donate
+        </Button>{" "}
+      </Link>
     </section>
   );
 };

@@ -36,6 +36,10 @@
   border-radius: 0;
 }
 
+#navBtn:hover{
+  color:rgb(14, 14, 14)
+}
+
 .pageTitle {
   text-align: center;
   font-size: 7rem;
