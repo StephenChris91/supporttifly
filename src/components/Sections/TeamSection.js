@@ -21,11 +21,11 @@ const TeamSection = ({ teamData }) => {
 
   const [isLoading, setIsLoading] = useState(true);
 
-  const getImageUrl = (imageRef) => {
-    const builder = imageUrlBuilder(sanityClient);
-    const imageUrl = builder.image(imageRef).url();
-    return imageUrl;
-  };
+  // const getImageUrl = (imageRef) => {
+  //   const builder = imageUrlBuilder(sanityClient);
+  //   const imageUrl = builder.image(imageRef).url();
+  //   return imageUrl;
+  // };
 
   useEffect(() => {
     setIsLoading(false);

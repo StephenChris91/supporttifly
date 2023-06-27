@@ -1,21 +1,49 @@
-.donationContainer{
+.donationContainer {
     height: 800px;
     width: 100%;
     overflow: hidden;
+    position: relative;
+    z-index: 1;
+    background: url('/donateBG.png') center/cover no-repeat;
 }
 
-.donationForm{
-    width: 100%; 
+/* .backgroundImage {
+  } */
+  
+  .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #000000af;
+  }
+  
+  .contentContainer {
+    position: relative;
+    z-index: 99;
+  }
+  
+  .donationForm {
+    width: 100%;
     padding: 20px;
     display: flex;
     flex-direction: column;
     place-items: center;
     height: 100vh;
     margin-top: 100px;
-}
+    z-index: 99;
+  }
+
+/* .overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #000000c5;
+    z-index: -1;
+} */
 
 .donationHeader{
     font-size: 5rem;
+    color: #fff;
 }
 
 .donationForm > div > input {
