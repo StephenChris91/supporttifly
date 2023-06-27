@@ -21,18 +21,21 @@ const CampaignSection = () => {
                   width={500}
                   height={500}
                   loading="lazy"
+                  alt="carousel-img"
                 />
                 <Image
                   src="/images/educare.png"
                   width={500}
                   height={500}
                   loading="lazy"
+                  alt="carousel-img"
                 />
                 <Image
                   src="/images/health.png"
                   width={500}
                   height={500}
                   loading="lazy"
+                  alt="carousel-img"
                 />
               </Carousel>
             </div>

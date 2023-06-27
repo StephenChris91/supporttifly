@@ -6,8 +6,19 @@
     margin: auto;
 }
 
+.noDiv {
+    margin-bottom: 430px;
+}
+
+
+  
+
 @media (max-width: 600px) {
     .pageTitle{
         margin-top: 2000px;
+    }
+
+    .noDiv {
+        margin-bottom: -250px;
     }
 }

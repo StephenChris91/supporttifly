@@ -111,13 +111,13 @@ const Nav = ({ image, color, linkColor }) => {
             color="white"
             justify="space-between"
           >
-            <Link href="/" p={2} color={`${color}`}>
+            <Link href="/" p={2} color={`${color}`} passHref>
               Home
             </Link>
-            <Link href="/outreach" p={2} className={`${color}`}>
+            <Link href="/outreach" p={2} className={`${color}`} passHref>
               Outreach
             </Link>
-            <Link href="/contact" p={2} className={`${color}`}>
+            <Link href="/contact" p={2} className={`${color}`} passHref>
               Contact
             </Link>
             <Link href="/donation" passHref>
