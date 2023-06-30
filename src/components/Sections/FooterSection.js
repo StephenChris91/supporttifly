@@ -28,10 +28,22 @@ const FooterSection = () => {
                   for people in need.
                 </p>
                 <div className="flex gap-4 mb-10 sm:mt-0 sm:justify-center">
-                  <Footer.Icon href="#" icon={BsFacebook} />
-                  <Footer.Icon href="#" icon={BsInstagram} />
-                  <Footer.Icon href="#" icon={BsTwitter} />
-                  <Footer.Icon href="#" icon={BsLinkedin} />
+                  <Footer.Icon
+                    href="https://www.facebook.com/profile.php?id=100092393693616&mibextid=LQQJ4d"
+                    icon={BsFacebook}
+                  />
+                  <Footer.Icon
+                    href="https://instagram.com/supportifly?igshid=MzRlODBiNWFlZA=="
+                    icon={BsInstagram}
+                  />
+                  <Footer.Icon
+                    href="https://twitter.com/supportifly?s=21&t=on0Oz-YcpPohVP6_avs1qQ"
+                    icon={BsTwitter}
+                  />
+                  <Footer.Icon
+                    href="https://www.linkedin.com/in/supportifly-ng-0ba89026a"
+                    icon={BsLinkedin}
+                  />
                 </div>
               </Footer.LinkGroup>
             </div>
