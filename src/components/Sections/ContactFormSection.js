@@ -62,7 +62,7 @@ const ContactForm = () => {
 
   return (
     <Box w="100%" p={4}>
-      <form ref={formData}>
+      <form ref={formRef}>
         <VStack spacing={4} align="start">
           <FormControl id="name">
             <FormLabel>Name</FormLabel>
