@@ -43,8 +43,15 @@ const ContactForm = () => {
     }
 
     setLoading(true);
+
     try {
-      await sendEmail(form.current);
+      const formData = {
+        name,
+        email,
+        subject,
+        message,
+      };
+      await sendEmail(formData);
       toast.success("Email sent successfully");
       setName("");
       setEmail("");
