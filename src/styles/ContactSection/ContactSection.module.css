@@ -17,6 +17,10 @@
 #small, #base, #comment {
     border-radius: 0;
 }
+
+.volunteerForm {
+  width: 50%;
+}
 .volunteerImage{
     margin-right: 20px;
 }
