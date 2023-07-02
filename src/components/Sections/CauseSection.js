@@ -10,7 +10,7 @@ const CauseSection = () => {
       <div className={styles.causesWrapper}>
         <div className={styles.causes}>
           <Image
-            src="/images/feed-poor.jpg"
+            src="/images/feed-poor.png"
             alt="causeImg"
             width={500}
             height={600}
@@ -24,7 +24,7 @@ const CauseSection = () => {
         </div>
         <div className={styles.causes}>
           <Image
-            src="/images/health.jpg"
+            src="/images/health.png"
             alt="causeImg"
             width={500}
             height={600}
