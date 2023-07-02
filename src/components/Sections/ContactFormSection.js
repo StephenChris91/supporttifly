@@ -15,7 +15,7 @@ import {
 } from "@chakra-ui/react";
 
 const ContactForm = () => {
-  const form = useRef();
+  const formRef = useRef();
   const [loading, setLoading] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -45,12 +45,8 @@ const ContactForm = () => {
     setLoading(true);
 
     try {
-      const formData = {
-        name,
-        email,
-        subject,
-        message,
-      };
+      const formData = new FormData(formRef.current);
+
       await sendEmail(formData);
       toast.success("Email sent successfully");
       setName("");
@@ -66,7 +62,7 @@ const ContactForm = () => {
 
   return (
     <Box w="100%" p={4}>
-      <form ref={form}>
+      <form ref={formData}>
         <VStack spacing={4} align="start">
           <FormControl id="name">
             <FormLabel>Name</FormLabel>
