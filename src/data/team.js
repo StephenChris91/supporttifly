@@ -45,7 +45,7 @@ export const team = [
   },
   {
     title: "Fatteh",
-    name: "FATTEH, Hanid Olaniyi",
+    name: "FATTEH, Hamid Olaniyi",
     position: "Press Officer",
     image: "/images/team/fatteh.jpg",
     socialMediaIcons: [
