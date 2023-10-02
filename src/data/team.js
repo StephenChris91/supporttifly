@@ -22,17 +22,6 @@ export const team = [
     ],
   },
   {
-    title: "Abeni",
-    name: "YUSUF, Balkis Oluwakemi",
-    position: "Program Director",
-    image: "/images/team/Abeni.png",
-    socialMediaIcons: [
-      "https://web.facebook.com/haishah.badmus?_rdc=1&amp;_rdr",
-      "https://www.instagram.com/omidan.abeni",
-      "https://www.twitter.com/AbeniAde_",
-    ],
-  },
-  {
     title: "Lance",
     name: "LANCE, Momodu Jnr",
     position: "Media & Publicity Director",
@@ -52,6 +41,17 @@ export const team = [
       "https://www.facebook.com/profile.php?id=100069210289916&amp;mibextid=LQQJ4d",
       "https://www.instagram.com/remi_afr",
       "https://www.twitter.com/nana_remi03",
+    ],
+  },
+  {
+    title: "Fatteh",
+    name: "FATTEH, Hanid Olaniyi",
+    position: "Press Officer",
+    image: "/images/team/fatteh.jpg",
+    socialMediaIcons: [
+      "https://web.facebook.com/faateholaniyi.hamid",
+      "https://Instagram.com/Ogbeni_Ayoola",
+      "https://twitter.com/OgbeniAyoola",
     ],
   },
   {
