@@ -50,7 +50,7 @@ export const team = [
     image: "/images/team/fatteh.jpg",
     socialMediaIcons: [
       "https://web.facebook.com/faateholaniyi.hamid",
-      "https://Instagram.com/Ogbeni_Ayoola",
+      "https://instagram.com/Ogbeni_Ayoola",
       "https://twitter.com/OgbeniAyoola",
     ],
   },
